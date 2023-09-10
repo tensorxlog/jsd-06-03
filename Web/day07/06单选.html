@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.15.9/theme-chalk/index.css">
+</head>
+
+<body>
+
+<div id="app">
+    <h1>{{city}}</h1>
+<el-radio-group v-model="radio1">
+    <el-radio-button label="上海"></el-radio-button>
+    <el-radio-button label="北京"></el-radio-button>
+    <el-radio-button label="广州"></el-radio-button>
+    <el-radio-button label="深圳"></el-radio-button>
+</el-radio-group>
+</div>
+
+
+</body>
+
+<!-- import Vue before Element -->
+<script src="https://cdn.staticfile.org/vue/2.6.14/vue.min.js"></script>
+<!-- import Element JavaScript -->
+<script src="https://cdn.staticfile.org/element-ui/2.15.9/index.min.js"></script>
+<script>
+    let v = new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                city: '',
+                radio1: '上海',
+            }
+        },
+        methods: {
+            
+        },
+  })
+</script>
+
+</html>

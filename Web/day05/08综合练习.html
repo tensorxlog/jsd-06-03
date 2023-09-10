@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <table border="1">
+        <caption>个人信息</caption>
+        <tr>
+            <td>照片</td>
+            <td id="pic_td"></td>
+        </tr>
+        <tr>
+            <td>姓名</td>
+            <td id="name_td"></td>
+        </tr>
+        <tr>
+            <td>年龄</td>
+            <td id="age_td"></td>
+        </tr>
+        <tr>
+            <td>好友</td>
+            <td id="friends_td"></td>
+        </tr>
+    </table>
+    <button onclick='load()'>加载数据</button>
+
+    <script>
+        function load() {
+            let p = {
+                name: 'Harry',
+                age: 20,
+                url: 'www.baidu.com',
+                friends: [
+                    'friend1',
+                    'friend2'
+                ]
+            };
+            let name_td = document.querySelector('#name_td');
+            let age_td = document.querySelector('#age_td');
+            name_td.innerText = p.name;
+            age_td.innerText = p.age;
+            let pic_td = document.querySelector('#pic_td');
+            let img = document.createElement('img');
+            img.src = '../0808.PNG';
+            img.width = '200';
+            pic_td.append(img);
+
+            let friends_td = document.querySelector('#friends_td');
+            let ul = document.createElement('ul');
+            for (let friend of p.friends) {
+                let li = document.createElement('li');
+                li.innerText = friend;
+                ul.append(li);
+            }
+            friends_td.append(ul);
+        }
+    </script>
+</body>
+</html>

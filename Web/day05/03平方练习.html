@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input type="text">
+    <button onclick="f()">获取平方</button>
+    <h1>平方：<span></span></h1>
+
+    <script>
+        function f() {
+            let elem = document.querySelector('h1>span');
+            let input = document.querySelector('input').value;
+            if (isNaN(input)) {
+                elem.innerHTML = '输入错误！';
+                return;
+            }
+            elem.innerHTML = parseFloat(input) + parseFloat(input);
+        }
+    </script>
+</body>
+</html>
+
+

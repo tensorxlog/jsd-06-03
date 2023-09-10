@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    body{
+      font: 12px "simhei", Arial, Helvetica, sans-serif;
+      color: #666;
+    }
+    body>div{
+      width: 1000px;margin: 0 auto;
+    }
+    #t_l_div{
+      width: 611px;height: 376px;
+      background-color: gray;
+      float: left;
+    }
+    #t_r_div{
+      width: 375px;height: 376px;
+      background-color: gray;
+      float: right;
+    }
+    #t_div,#b_div{
+      overflow: hidden;/*解决高度为0的问题*/
+      margin-bottom: 10px;/*行之间的距离*/
+    }
+    #b_l_div{
+      width: 366px;height: 233px;float: left;
+      background-color: gray;
+    }
+    #b_r_div{float: right;}
+    #b_r_div>div{
+      width: 198px;height: 233px;
+      float: left;background-color: gray;
+      margin-left: 10px;
+    }
+
+    #t_l_div>div{
+      width: 245px;
+      height: 232px;
+      margin: 68px 0 0 36px;
+    }
+    .title_p{
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 12px;
+    }
+    .intro_p{
+      margin-bottom: 24px;
+    }
+    .price_p{
+      font-size: 24px;
+      color: #0aa1ed;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    #t_div a{
+      width: 132px;
+      height: 40px;
+      background-color: #0aa1ed;
+      display: block;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 3px;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    #t_l_div{position: relative}
+    #t_l_div>img{
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      width: 318px;
+      height: 319px;
+    }
+/*****************右上相关样式****************/
+    #t_r_div>div{
+      width: 253px;
+      height: 232px;
+      margin: 39px 0 0 25px;
+    }
+    #t_r_div{position: relative}
+    #t_r_div>img{
+      position: absolute;
+      right: 20px;
+      bottom:20px
+    }
+    img {
+        transition-duration: 1s;
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
+    #t_r_div a {
+        position: relative;
+        z-index: 1;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <div id="t_div">
+    <div id="t_l_div">
+     <div>
+       <p class="title_p">灵越 燃7000系列</p>
+       <p class="intro_p">酷睿双核i5处理器|256GB SSD| 8GB内存<br>
+         英特尔HD显卡620含共享显卡内存</p>
+       <p class="price_p">￥4999.00</p>
+       <a href="">查看详情</a>
+     </div>
+      <img src="https://doc.codeboy.com/tstore_v1/images/itemCat/study_computer_img1.png">
+    </div>
+    <div id="t_r_div">
+      <div>
+        <p class="title_p">颜值狂不住</p>
+        <p class="intro_p">酷睿双核i5处理器|256GB SSD| 8GB内存<br>
+          英特尔HD显卡620含共享显卡内存</p>
+        <p class="price_p">￥6888.00</p>
+        <a href="">查看详情</a>
+      </div>
+      <img src="https://doc.codeboy.com/tstore_v1/images/itemCat/study_computer_img2.png">
+
+    </div>
+  </div>
+  <div id="b_div">
+    <div id="b_l_div"></div>
+    <div id="b_r_div">
+      <div></div><div></div><div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

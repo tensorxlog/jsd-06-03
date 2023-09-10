@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div>
+        <input type="text" :value="value">
+        <a :href="url">url</a>
+    </div>
+    <script>
+        let v = new Vue({
+            el: 'body>div',
+            data() {
+                return {
+                    value: 'test this shit',
+                    url: 'https://www.baidu.com'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

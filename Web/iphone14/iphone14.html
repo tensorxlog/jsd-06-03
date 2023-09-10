@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title></title>
+    <style>
+        /* common settings */
+        :root {
+          --xinit: 200px;
+          --yinit: -50px;
+          --width: 1178px;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f5f5f7;        
+        }
+
+        .bg {
+            background-color: white;
+        }
+
+        .container {
+            margin-bottom: 50px;
+            width: var(--width);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* selecting animation */
+        .test {
+            transition-duration: 1.5s;
+            transform: rotate(10deg);
+            transform-origin: 700px 1500px;
+            margin-top: 10px;
+            width: 100%;
+            height: 100%;
+        }
+        .test>img {
+            /*mix-blend-mode: multiply;*/
+            position: absolute;
+        }
+        .test>img:nth-child(1) {
+            transform: translate(calc(var(--xinit) - 720px), calc(var(--yinit) + 650px)) rotate(0deg);
+            /*
+            left: calc(var(--xinit) - 500px);
+            top: calc(var(--yinit) + 300px);
+            */
+        }
+        .test>img:nth-child(2) {
+            transform: translate(calc(var(--xinit) - 560px), calc(var(--yinit) + 430px)) rotate(0deg);
+            /*
+            left: calc(var(--xinit) - 300px);
+            top: calc(var(--yinit) + 100px);
+            */
+        }
+        .test>img:nth-child(3) {
+            transform: translate(calc(var(--xinit) - 320px), calc(var(--yinit) + 280px)) rotate(0deg);
+            /*
+            left: calc(var(--xinit));
+            top: calc(var(--yinit));
+            */
+        }
+        .test>img:nth-child(4) {
+            transform: translate(calc(var(--xinit) + 0px), calc(var(--yinit) + 180px)) rotate(0deg);
+            /*
+            left: calc(var(--xinit) + 300px);
+            top: calc(var(--yinit) + 100px);
+            */
+        }
+        .test>img:nth-child(5) {
+            transform: translate(calc(var(--xinit) + 100%), calc(var(--yinit) + 100px)) rotate(0deg);
+            /*
+            left: calc(var(--xinit) + 500px);
+            top: calc(var(--yinit) + 300px);
+            */
+        }
+        .test>img:nth-child(6) {
+            transform: translate(calc(var(--xinit) + 600px), calc(var(--yinit) + 140px)) rotate(0deg);
+            /*
+            left: calc(var(--xinit));
+            top: calc(var(--yinit));
+            */
+        }
+
+        /* models */
+        div#models_div {
+            height: 900px;
+            position: relative;
+            overflow: hidden;
+        }
+        div#models_div>div>p {
+            font-size: 70px;
+            font-weight: bold;
+            position: absolute;
+            left: 100px;
+            z-index: 1;
+        }
+        div#models_div>div>div {
+            overflow: hidden;
+            margin-right: 140px;
+            padding-right: 20px;
+        }
+
+        /* text indicating model color */
+        #color {
+            margin-top: 102px;
+            float: right;
+            position: relative;
+            font-weight: bold;
+            font-size: 20px;
+            display: inline-block;
+            width: 60px;
+            text-align: center;
+        }
+
+        /* color selector */
+        #indicator {
+            margin-top: 96px;
+            float: right;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            border: 2px solid #1274e0;
+            left: 204px;
+        }
+        div#models_div>div>div>button {
+            width: 25px;
+            height: 25px;
+            border-radius: 25px;
+            margin-top: 100px;
+            margin-left: 10px;
+            border: none;
+            float: right;
+            position: relative;
+            z-index: 1000;
+        }
+        div#models_div>div>div>button:hover {
+            cursor: pointer;
+        }
+
+        /* model images */
+        div#models_div>img {
+            width: 1000px;
+            position: absolute;
+            top: 120px;
+        }
+
+        /* Buy */
+        div#title_div {
+           height: 165px;         
+           text-align: center;
+           padding-top: 20px;
+           padding-bottom: 80px;
+        }
+        p#title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        p#description {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        div#title_div>a {
+            display: block;
+            width: 76px;
+            height: 44px;
+            margin: auto;
+            background-color: #1274e0;
+            border-radius: 30px;
+            color: white;
+            font-size: 20px;
+            line-height: 44px;
+            text-decoration: none;
+        }
+
+        /* features */
+        div#features_div {
+            width: var(--width);
+            height: 2282px;
+            padding-top: 40px;
+            margin: auto;
+        }
+        div#feature1 {
+            margin: auto auto 100px auto;
+        }
+        div#feature2 {
+            margin: auto auto 80px auto;
+        }
+        div#feature1>p {
+            width: 811px;
+            height: 60px;
+            margin: auto;
+            position: relative;
+            left: 100px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        div#feature1>img {
+            display: block;
+            width: 811px;
+            height: 732px;
+            margin: auto;
+        }
+        div#feature2>div, div#feature3>div {
+            width: 817px;
+            height: 669px;
+            margin: auto;
+            position: relative;
+        }
+        div#feature2>div>p, div#feature3>div>p {
+            width: 240px;
+            position: absolute;
+            left: 60px;
+            font-size: 20px;
+        }
+        div#feature2>div>p:nth-child(1) {
+            top: 180px;
+        }
+        div#feature2>div>p:nth-child(2) {
+            top: 320px;
+        }
+        div#feature2>div>img {
+            height: 100%;
+            position: absolute;
+            right: 0;
+        }
+        div#feature3 {
+            margin: auto;
+        }
+        div#feature3>div>img {
+            height: 50%;
+            position: absolute;
+            top: 150px;
+            left: 65px;
+        }
+
+        /* long battery life */
+        div#p14 {
+            height: 800px;
+            padding-top: 200px;
+            box-sizing: border-box;
+        }
+        div#p14>p {
+            text-align: center;
+            font-weight: bold;
+            margin: auto;
+        }
+        div#p14>p:nth-child(1) {
+            font-size: 40px;
+            color: #868686;
+            margin: 20px;
+        }
+        div#p14>p:nth-child(2) {
+            width: 800px;
+            font-size: 86px;
+            /*
+            color: linear-gradient(#83bc39, blue);
+            */
+            background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(131, 188, 57, 1)), to(rgba(75, 93, 52, 1)));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .battery {
+            padding: 0 10px 0 10px;
+            border: 1px solid green;
+            border-radius: 20px;
+        }
+        .battery-head {
+            width: 15px;
+            height: 40px;
+            background-color: green;
+            display: inline-block;
+            border-radius: 0px 20px 20px 0px;
+            margin-left: 10px;
+            position: relative;
+            top: -5px;
+        }
+
+        /* durability */
+        div#durability {
+            width: 980px;
+            height: 1220px;
+            margin: auto;
+            box-sizing: border-box;
+            padding-top: 80px;
+            overflow: hidden;
+        }
+        div#durability>p {
+            margin: 0;
+        }
+        div#durability>p:nth-child(1) {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        div#durability>p:nth-child(2) {
+            width: 600px;
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 80px;
+        }
+        div#durability>div {
+            overflow: hidden;
+        }
+        div#durability>div>p {
+            width: 328px;
+            margin-right: 50px;
+            float: left;
+            font-size: 20px;
+        }
+        div#durability>img {
+            width: 673px;
+            display: block;
+            margin: auto;
+            margin-top: 60px;
+        }
+        .gray {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<!--- Models --->
+
+<div class="bg" style="background: linear-gradient(white, #f0f0f0)">
+<div class="container" style="margin-bottom: 0;">
+    <div id="models_div">
+        <div>
+            <p>Wonderfull.</p>
+            <div>
+                <button onclick="rotate(5)" style="background-color: #f4e38d;"></button>
+                <button onclick="rotate(4)" style="background-color: #e7d7e9;"></button>
+                <button onclick="rotate(3)" style="background-color: #c0cfdd;"></button>
+                <button onclick="rotate(2)" style="background-color: #de2131;"></button>
+                <button onclick="rotate(1)" style="background-color: #f0ece8;"></button>
+                <button onclick="rotate(0)" style="background-color: #31353a;"></button>
+                <span id="color">Blue</span>
+                <span id="indicator"></span>
+            </div>
+        </div>
+        <div class="test">
+	    	<img src="resources-iphone14/1.png">
+	    	<img src="resources-iphone14/2.png">
+	    	<img src="resources-iphone14/3.png">
+	    	<img src="resources-iphone14/4.png">
+            <img src="resources-iphone14/5.png">
+	    	<img src="resources-iphone14/6.png">
+	    </div>
+    </div>
+</div>
+</div>
+
+<div class="bg">
+<div id="title_div" class="container">
+    <p id="title">iPhone 14 and iPhone 14 Plus</p>
+    <p id="description">From $799 or $33.29/mo. for 24 mo. before trade‑in*</p>
+    <a href="https://www.apple.com/us/shop/goto/buy_iphone/iphone_14">Buy</a>
+</div>
+</div>
+
+<!--- Big and Bigger --->
+
+<div class="bg">
+<div class="container">
+    <div id="features_div">
+        <div id="feature1">
+            <p>Big and bigger.</p>
+            <img src="resources-iphone14/dd_size_v__faidcvs4aamy_large_2x.jpg" alt="">
+        </div>
+        <div id="feature2">
+            <div>
+                <p>iPhone 14 Plus has 21% more screen<span class="gray">, making it supersized but surprisingly lightweight.</span></p>
+                <p><span class="gray">Both models have a vibrant</span> Super Retina XDR display. <span class="gray">And</span> OLED technology <span class="gray">for bright whites and true blacks.</span></p>
+                <img src="resources-iphone14/dd_size_screen__fwcin0yke3am_small_2x.jpg" alt="">
+            </div>
+        </div>
+        <div id="feature3">
+            <div>
+                <p><span class="gray">High resolution and color accuracy make everything look</span> sharp and true to life.</p>
+                <img src="resources-iphone14/dd_size_oled_v__0pyncvsfvhuq_large_2x.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--- iPhone 14 Plus --->
+<div class="bg">
+<div class="container">
+    <div id="p14">
+        <p>iPhone 14 Plus</p>
+        <p>The <span class="battery">looongest</span><span class="battery-head"></span> battery life of any iPhone. Ever.</p>
+    </div>
+</div>
+</div>
+
+<!--- Tougher than any smartphone glass --->
+<div class="bg">
+<div class="container">
+    <div id="durability">
+        <p>Ceramic Shield</p>
+        <p>Tougher than any smartphone glass.</p>
+        <div>
+            <p><span class="gray">Nano-ceramic crystals — which are harder than most metals — are fused into glass for</span> far greater durability.</p>
+            <p><span class="gray">Our dual ion-exchange process also</span> protects against nicks, scratches, and everyday wear and tear.</p>
+        </div>
+        <img src="resources-iphone14/dd_ceramic_shield_v__fh3d51dkzdme_large_2x.jpg" alt="">
+    </div>
+</div>
+</div>
+
+<script>
+    function rotate(i) {
+        let items = document.querySelectorAll('.test>img');
+        let colors = ['black', 'white', 'red', 'blue', 'purple', 'yellow'];
+        let angle = 55 - 15 * i;
+        let posx = 99 + 35 * i;
+        document.querySelector('#indicator').style.left = posx + 'px';
+        document.querySelector('#color').innerHTML = colors[i];
+        document.querySelector('.test').style.transform = "rotate(" + angle + "deg)";
+    }
+
+</script>
+</body>
+</html>

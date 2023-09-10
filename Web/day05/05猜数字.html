@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    猜数字：<input type="text">
+    <button onclick="f()">开猜</button>
+    <h1>结果：<span></span></h1>
+    
+    <script>
+        let randint = parseInt(Math.random() * 100) + 1;
+        function f() {
+            let input = document.querySelector('input').value;
+            let res = document.querySelector('h1>span');
+            if (isNaN(input)) {
+                res.innerText = '输入错误';
+                return;
+            }
+            if (randint == input) {
+                res.innerText = '猜对了';
+            } else if (input > randint) {
+                res.innerText = '猜大了';
+            } else {
+                res.innerText = '猜小了';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div>
+        {{info}}
+    </div>
+    <p v-html="info"></p>
+    <p v-text="info"></p>
+    <script>
+        let v = new Vue({
+            el: 'body p, body div',
+            data() {
+                return {
+                    info: 'test this <b>shit</b>'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

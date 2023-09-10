@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../js/vue.js"></script>
+</head>
+<body>
+<div>
+    {{info}}
+    <input type="text" :value="info">
+    <input type="text" v-model="info">
+</div>
+<script>
+  let v = new Vue({
+    el: 'body>div',
+    data() {
+      return {
+        info: "双向绑定"
+      }
+    },
+  })
+</script>
+</body>
+</html>

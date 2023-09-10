@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input type="text">
+    <input type="text">
+    <button id="plus" onclick="plus()">加</button>
+    <button id="minus" onclick="minus()">减</button>
+    <button id="multiply" onclick="multiply()">乘</button>
+    <button id="divide" onclick="divide()">除</button>
+    <h1>结果: <span></span></h1>
+
+    <script>
+        let inputs = Array.from(document.querySelectorAll('input'));
+        let elem = document.querySelector('h1>span');
+
+        function plus() {
+            let a = parseFloat(inputs[0].value);
+            let b = parseFloat(inputs[1].value);
+            if (isNaN(a) || isNaN(b)) {
+                elem.innerHTML = '输入错误！';
+                return;
+            }
+            elem.innerHTML = a + b;
+        }
+        function minus() {
+            if (isNaN(a) || isNaN(b)) {
+                elem.innerHTML = '输入错误！';
+                return;
+            }
+            elem.innerHTML = a - b;
+        }
+        function multiply() {
+            if (isNaN(a) || isNaN(b)) {
+                elem.innerHTML = '输入错误！';
+                return;
+            }
+            elem.innerHTML = a / b;
+        }
+        function multiply() {
+            if (isNaN(a) || isNaN(b) || b === 0) {
+                elem.innerHTML = '输入错误！';
+                return;
+            }
+            elem.innerHTML = a * b;
+        }
+
+    </script>
+</body>
+</html>

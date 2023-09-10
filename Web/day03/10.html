@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合练习</title>
+  <style>
+    #t_div {
+      width: 1000px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    #t_l_div {
+      box-sizing: border-box;
+      width: 611px;
+      height: 376px;
+      background-color: #E8E8E8;
+      float: left;
+      background-image: url("https://doc.codeboy.com/tstore_v1/images/itemCat/study_computer_img1.png");
+      background-repeat: no-repeat;
+      background-position: 200px 20px;
+      padding-left: 30px;
+    }
+    #t_r_div {
+      box-sizing: border-box;
+      width: 375px;
+      height: 376px;
+      background-color: #E8E8E8;
+      float: right;
+      background-image: url("https://doc.codeboy.com/tstore_v1/images/itemCat/study_computer_img2.png");
+      background-repeat: no-repeat;
+      background-position: 70px 120px;
+      padding-left: 30px;
+    }
+    .btn_detail {
+      color: white;
+      display: block;
+      background-color: #0AA1ED;
+      width: 81px;
+      height: 23px;
+      padding: 5px;
+      text-decoration: none;
+      text-align: center;
+    }
+    #b_div {
+      width: 1000px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    #b_l_div {
+      box-sizing: border-box;
+      width: 366px;
+      height: 233px;
+      float: left;
+      background-color: #E8E8E8;
+    }
+    #b_r_div {
+      box-sizing: border-box;
+      float: right;
+    }
+    .title {
+      font-size: 32px;
+      font-width: bold;
+      margin-bottom: 20px;
+      margin-top: 50px;
+    }
+    .description {
+      font-size: 14px;
+      margin-bottom: 50px;
+      width: 240px;
+    }
+    .price {
+      color: #0AA1ED;
+      font-size: 24px;
+      font-width: bold;
+      margin-bottom: 10px;
+    }
+    #t_l_div>p.price {
+      width: 240px;
+    }
+    #t_r_div>p.price {
+      width: 200px;
+    }
+    .item {
+      width: 198px;
+      height: 233px;
+      float: left;
+      margin-left: 10px;
+      background-color: #E8E8E8;
+    }
+    #blheader {
+      background-color: #0AA1ED;
+      color: white;
+    }
+    #blheader>span {
+      position: relative;
+      top: -2px;
+    }
+    #device_list {
+      background-color: #e8e8e8;
+      color: #0AA1ED;
+      font-size: 12px;
+      padding-left: 20px;
+    }
+    #device_list>ul {
+      list-style-type: none;
+      overflow: hidden;
+      padding-left: 0;
+      padding-bottom: 10px;
+    }
+    #device_list>ul>li {
+      float: left;
+      margin-right: 10px;
+    }
+    #blheader {
+      padding-left: 8px;
+    }
+    #blheader>img {
+      height: 14px;
+    }
+    .item>p {
+      font-size: 12px;
+      margin: 0;
+      text-align: center;
+    }
+    .item>.btn_detail {
+      font-size: 14px;
+      margin: auto;
+      height: 16px;
+      line-height: 16px;
+    }
+    .price1 {
+      color: #0AA1ED;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <div id="t_div">
+    <div id="t_l_div">
+      <p class="title">灵越 燃7000系列</p>
+      <p class="description">酷睿双核i5处理器|256GB SSD| 8GB内存英特尔HD显卡620含共享显卡内存</p>
+      <p class="price">￥4999.00</p>
+      <a class="btn_detail" href="https://doc.codeboy.com/tstore_v1/web/product_details.html">查看详情</a>
+    </div>
+    <div id="t_r_div">
+      <p class="title">颜值 框不住</p>
+      <p class="description">酷睿双核i5处理器|256GB SSD| 8GB内存
+英特尔HD显卡620含共享显卡内存</p>
+      <p class="price">￥6888.00</p>
+      <a class="btn_detail" href="https://doc.codeboy.com/tstore_v1/images/itemCat/study_computer_img2.png">查看详情</a>
+    </div>
+  </div>
+  <div id="b_div">
+    <div id="b_l_div">
+      <div id="blheader">
+        <img src="https://doc.codeboy.com/tstore_v1/images/itemCat/computer_icon1.png" alt="">
+        <span>电脑，办公/1F</span>
+      </div>
+      <div id="device_list">
+        <p>电脑整机</p>
+        <ul>
+          <li>笔记本</li>
+          <li>游戏机</li>
+          <li>台式机</li>
+          <li>一体机</li>
+          <li>服务器</li>
+          <li>联想</li>
+        </ul>
+        <p>电脑配件</p>
+        <ul>
+          <li>CPU</li>
+          <li>SSD硬盘</li>
+          <li>显示器</li>
+          <li>显卡</li>
+          <li>组装电脑</li>
+          <li>机箱</li>
+        </ul>
+        <p>外设/游戏</p>
+        <ul>
+          <li>键盘</li>
+          <li>鼠标</li>
+          <li>U盘</li>
+          <li>移动硬盘</li>
+          <li>游戏设备</li>
+          <li>智能单车</li>
+        </ul>
+      </div>
+    </div>
+    <div id="b_r_div">
+      <div class="item">
+        <img src="https://doc.codeboy.com/tstore_v1/images/itemCat/study_computer_img3.png" alt="">
+        <p>戴尔(DELL)XPS13-9360-R1609 13.3英寸微边框笔记本电脑</p>
+        <p class="price1">￥4600.00</p>
+        <a class="btn_detail" href="https://doc.codeboy.com/tstore_v1/web/product_details.html">查看详情</a>
+      </div>
+      <div class="item">
+        <img src="https://doc.codeboy.com/tstore_v1/images/itemCat/study_computer_img4.png" alt="">
+        <p>14.8mm超轻薄笔记本电脑 航海王版 13.3英寸微边框笔记本电脑</p>
+        <p class="price1">￥5600.00</p>
+        <a class="btn_detail" href="https://doc.codeboy.com/tstore_v1/web/product_details.html">查看详情</a>
+      </div>
+      <div class="item">
+        <img src="https://doc.codeboy.com/tstore_v1/images/itemCat/study_computer_img5.png" alt="">
+        <p>联想(Lenovo) YOGA900 多彩版 13.3英寸微边框笔记本电脑</p>
+        <p class="price1">￥6600.00</p>
+        <a class="btn_detail" href="https://doc.codeboy.com/tstore_v1/web/product_details.html">查看详情</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

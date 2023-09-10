@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.15.9/theme-chalk/index.css">
+</head>
+
+<body>
+
+<div id="app">
+    <p>normal:</p>
+    <el-row>
+        <el-button type="warning">warning</el-button>
+        <el-button type="info">info</el-button>
+        <el-button type="danger">danger</el-button>
+    </el-row>
+    <p>round:</p>
+    <el-row>
+        <el-button type="warning" round>warning</el-button>
+        <el-button type="info" round>info</el-button>
+        <el-button type="danger" round>danger</el-button>
+    </el-row>
+    <p>circle:</p>
+    <el-row>
+        <el-button type="warning" circle icon="el-icon-delete-solid"></el-button>
+        <el-button type="info" circle icon="el-icon-star-off"></el-button>
+        <el-button type="danger" circle icon="el-icon-star-on"></el-button>
+    </el-row>
+    <el-row>
+        <el-button type="warning" circle icon="el-icon-delete-solid" size="medium"></el-button>
+        <el-button type="info" circle icon="el-icon-star-off" size="large"></el-button>
+        <el-button type="danger" circle icon="el-icon-star-on"></el-button>
+    </el-row>
+
+    <el-divider content-position="left">test this shit</el-divider>
+    <el-divider content-position="right">test this shit</el-divider>
+    test1
+    <el-divider direction="vertical"></el-divider>
+    test2
+
+
+
+
+
+</div>
+
+
+</body>
+
+<!-- import Vue before Element -->
+<script src="https://cdn.staticfile.org/vue/2.6.14/vue.min.js"></script>
+<!-- import Element JavaScript -->
+<script src="https://cdn.staticfile.org/element-ui/2.15.9/index.min.js"></script>
+<script>
+    let v = new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                
+            }
+        },
+        methods: {
+            
+        },
+  })
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<div>
+    <input type="text" placeholder="姓名" v-model="emp.name"/>
+    <input type="text" placeholder="工资" v-model="emp.salary"/>
+    <input type="text" placeholder="工作" v-model="emp.job"/>
+    <button @click="addEmp()">添加</button>
+    <table border="1">
+        <tr>
+            <th>编号</th><th>姓名</th><th>工资</th><th>工作</th><th>操作</th>
+        </tr>
+        <tr v-for="(employee, i) in list">
+            <td>{{i+1}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.salary}}</td>
+            <td>{{employee.job}}</td>
+            <td><button @click="del(i)">删除</button></td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    let v = new Vue({
+        el: 'body>div',
+        data() {
+            return {
+                list: [
+                    {name: 'name1', salary: 'salary1', job: 'job1'},
+                    {name: 'name2', salary: 'salary2', job: 'job2'},
+                    {name: 'name3', salary: 'salary3', job: 'job3'},
+                    {name: 'name4', salary: 'salary4', job: 'job4'},
+                ],
+                emp: {name: '', salary: '', job: ''}
+            }
+        },
+        methods: {
+            addEmp() {
+                v.list.push({
+                    name: v.emp.name,
+                    salary: v.emp.salary,
+                    job: v.emp.job
+                });
+            },
+            del(i) {
+                v.list.splice(i, 1);
+            }
+        }
+    })
+</script>
+</body>
+</html>
